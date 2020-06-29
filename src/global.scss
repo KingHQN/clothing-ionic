@@ -24,3 +24,28 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-icon[name="menu-outline"] {
+  position: absolute;
+  font-size: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  z-index: 1;
+}
+
+ion-action-sheet {
+
+  .action-sheet-button-inner.sc-ion-action-sheet-md {
+    height: 40px;
+    width: 40px;
+  }
+
+  .action-sheet-group-cancel {
+    
+    .action-sheet-button-inner.sc-ion-action-sheet-md {
+      background: none;
+    }
+  }
+
+}

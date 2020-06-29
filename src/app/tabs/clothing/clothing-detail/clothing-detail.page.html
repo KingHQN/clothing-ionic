@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" defaultHref="/tabs/clothing">
+      <ion-back-button></ion-back-button>
+    </ion-button>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="clothes">
+    <ion-card-header>
+      <img src="{{ clothes.image }}" alt="">
+      <ion-card-subtitle>{{ categoryName }}</ion-card-subtitle>
+      <ion-card-title>{{ clothes.name }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p>{{ clothes.description }}</p>
+      <ion-item>
+        <ion-label><strong>Size:</strong></ion-label>
+        <ion-select interface="action-sheet" [(ngModel)]="size">
+          <ion-select-option *ngFor="let s of clothes.size" value="{{ s }}">{{ s }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Color:</strong></ion-label>
+        <ion-select interface="action-sheet" [(ngModel)]="color">
+          <ion-select-option *ngFor="let c of clothes.color" value="{{ c }}">{{ c }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button (click)="addToCart()" expand="block">Add to cart</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

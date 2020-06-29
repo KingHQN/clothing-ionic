@@ -1,0 +1,16 @@
+<ion-item>
+  <ion-avatar slot="start">
+    <img src="{{ cart.image }}">
+  </ion-avatar>
+  <ion-label>
+    <h1>{{ cart.product }}</h1>
+    <span class="price">{{ cart.price | currency }}</span><br><br>
+    <div class="colorBox">
+      <h3>Color: </h3>
+      <span class="color" [style.background]="cart.color"></span>
+    </div>
+    <h3>Size: {{ cart.size }}</h3>
+    <h3>Quantity: {{ cart.quantity }}</h3>
+  </ion-label>
+  <ion-icon name="close" (click)="delItemCart(cart)"></ion-icon>
+</ion-item>

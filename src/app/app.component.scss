@@ -1,0 +1,32 @@
+ion-item {
+  --padding-start: 0;
+
+  ion-icon {
+    margin-right: 20px;
+    margin-left: 20px;
+    --ion-text-color-rgb: #000;
+  }
+
+  ion-icon[name="arrow-forward"], ion-icon[name="arrow-down"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}
+
+ion-list {
+  padding: 0;
+}
+
+.active {
+  --ion-text-color: var(--ion-color-primary);
+
+  ion-icon {
+    --ion-text-color-rgb: var(--ion-color-primary);
+  }
+}
+
+.active-parent {
+  font-weight: bold;
+}

@@ -1,0 +1,14 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="clothing">
+      <ion-icon name="shirt"></ion-icon>
+      <ion-label>Clothing</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="cart">
+      <ion-icon name="cart"></ion-icon>
+      <ion-label>Cart</ion-label>
+      <ion-badge *ngIf="length > 0" color="warning">{{ length }}</ion-badge>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

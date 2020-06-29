@@ -1,0 +1,26 @@
+ion-item {
+  --padding-start:0px;
+
+  ion-avatar {
+    height: 70px;
+    width: 70px;
+  }
+
+  .colorBox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    h3 {
+      margin-right: 10px;
+    }
+
+    .color {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+  }
+  
+}

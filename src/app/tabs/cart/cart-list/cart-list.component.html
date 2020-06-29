@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-list-header>
+    Shopping Cart
+  </ion-list-header>
+  <ion-text>
+    You have {{ length }} {{ length > 1 ? 'items' : 'item' }} in your shopping cart.
+  </ion-text>
+  <app-cart-item *ngFor="let c of cart$ | async" [cart]="c"></app-cart-item>
+</ion-list>

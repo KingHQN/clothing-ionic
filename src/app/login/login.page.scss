@@ -1,0 +1,23 @@
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+
+  .errorsMsg {
+    background: #F2DDDD;
+    color: #FF0000;
+    padding: 5px 10px;
+  }
+  .btnLogin {
+    margin-top: 20px;
+  }
+
+  .error-message{
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}

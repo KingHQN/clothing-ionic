@@ -1,0 +1,23 @@
+<ion-card>
+  <ion-card-header>
+    <img src="{{ clothe.image }}" alt="" [routerLink]="['/tabs/clothing/detail', nonAccentVietnamese(clothe.name)]">
+    <ion-card-subtitle>{{ categoryName }}</ion-card-subtitle>
+    <ion-card-title>{{ clothe.name }}</ion-card-title>
+    <p><strong>{{ clothe.price | currency }}</strong></p>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>{{ clothe.description | slice: 0:100 }}...</p>
+    <ion-item>
+      <ion-label><strong>Size:</strong></ion-label>
+      <ion-select interface="action-sheet" [(ngModel)]="size">
+        <ion-select-option *ngFor="let s of clothe.size" value="{{ s }}">{{ s }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong>Color:</strong></ion-label>
+      <span class="color" *ngFor="let c of clothe.color" [style.background]="c" (click)="checkColor(c)" [ngClass]="{ 'selected' : (color === c && colorIsSelect) }"></span>
+    </ion-item>
+    <ion-button (click)="addToCart()" expand="block">Add to cart</ion-button>
+  </ion-card-content>
+</ion-card>
